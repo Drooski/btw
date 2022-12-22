@@ -1,0 +1,258 @@
+        scene c06s15p018 with dissolve
+        na "Everyone falls silent and looks around as that sinks in."
+        mc "Look, we can’t worry about that right now. We’ll just need to be careful. Let’s worry about the short term and start asking around. We need to find Alorine so we can get back to our world."
+        na "You look around, and see several possible people to talk to."
+
+        menu:
+            "The elf woman":
+                $ ch06elf = 1
+                $ ch06choice1 = 1
+                jump ch06elf
+            "The dwarf":
+                $ ch06dwarf = 1
+                $ ch06choice1 = 2
+                jump ch06elf
+            "The couple":
+                $ ch06couple = 1
+                $ ch06choice1 = 3
+                jump ch06couple
+            "The mother and child":
+                $ ch06mother = 1
+                $ ch06choice = 4
+                jump ch06mother
+
+    label ch06elf:
+
+        scene c06s15p019 with dissolve
+
+        if ch06choice2 = 0:
+            mc "Hannah, come with me. Let’s go talk to the elf lady, see if she knows anything. They have long lives, so she might have some historical point of reference. Maybe."
+            mc "Emily and Skylar, why don’t the two of you go talk to the dwarf. Kenny and Kaylee, take Oscar out into the forest. See if you can forage some food for when we leave."
+            na "They all nod, happy to have some kind of direction. You take Hannah’s hand and turn towards the elven woman."
+        elif ch06choice2 = 1:
+            mc "Come on, let’s go talk to the elf woman. They’re supposed to live long lives and have excellent memory, right? Maybe she’ll know something."
+
+        scene c06s15p020 with dissolve
+        na "She seems to hear or sense you coming. As soon as you start making your way to her, she stands and turns towards the two of you with a demure smile."
+        na "Taking a breath, you approach her in as friendly a manner as you can manage."
+        mc "Hello. We don’t mean to intrude, but we’re not from around here and we are kind of hoping you might be able to help us out with some information."
+        scene c06s15p021 with dissolve
+        lia "Do not worry, you are not intruding. My name is Liamoira, and it is a pleasure to meet you."
+        mc "Oh, I’m sorry. I’m [mc], this is Hannah."
+        scene c06s15p022 with dissolve
+        ha "Hello. I’m... uh. Hi."
+        lia "Please, be relaxed. I understand, meeting one of my kind for the first time can be overwhelming."
+        mc "Wait, how did you know?"
+        scene c06s15p023 with dissolve
+        lia "I could hear you speaking quite clearly. These ears are not simply ornamental."
+        mc "I’m sorry, we meant you no offense. Like I said, we’re not really from around here."
+        na "The woman seems to appraise you for a moment, looking between you and Hannah several times."
+        scene c06s15p024 with dissolve
+        lia "Yes, that is quite clear. I believe you come from a land quite far away indeed. Now then, if I heard correctly, you are seeking information about Alorine. Is that correct?"
+        mc "Wow, yeah, that’s right. You really can hear everything."
+        lia "My father would say I can hear enough. May I ask why you are seeking this woman?"
+        scene c06s15p025 with dissolve
+        mc "Well you see, she... wait, I never told you she was a woman. Does that mean you know of her?"
+        lia "I have some knowledge of the person, yes. Though it has been many years since I’ve heard the name. However, I do believe I asked why you would be seeking her."
+        mc "We have business with her. Let’s just say, we need to find her so that we can go home again."
+        scene c06s15p026 with dissolve
+        lia "Do you now? Interesting. Yes, I know of her. Though as I said, it has been many years since I’ve heard her name spoken."
+        scene c06s15p027 with dissolve
+        ha "Do you know where we can find her?"
+        lia "That... is complicated. The precise location of her castle has been lost to time, even to my people. I know it is rumored that her castle lies in the mountains beyond the Baylet Plains, but not much more than that."
+        scene c06s15p028 with dissolve
+        lia "I will advise you, if you have any other option to find your way home, you may want to take it. There is evil in the air, and it cannot be coincidence that you appear now asking about Alorine."
+        ha "Unfortunately, we don’t have any choice. We have to find her."
+        scene c06s15p029 with dissolve
+        lia "Well in that case, be careful. Others have gone in search of her in the past. Few have ever returned."
+        mc "Thank you, we’ll be careful. Is there anything else we should know?"
+        lia "I have nothing more to offer you. Safe travels to you and your friends."
+        scene c06s15p030 with dissolve
+        na "You give her a nod before turning away with Hannah."
+
+        if ch06choice2 = 1:
+            ha "Okay, I think we’ve gotten as much as we’re going to get. Let’s go talk to Emily and Skylar, compare notes."
+            jump ch06s15postloop
+
+        ha "Well, that was something at least. Who should we talk to next?"
+        scene c06s15p031 with dissolve
+        na "Looking around, you see that Emily and Skylar are walking away from the dwarf."
+
+        menu:
+            "The couple":
+                $ ch06couple = 1
+                $ ch06choice2 = 1
+                jump ch06couple
+            "The mother and child":
+                $ ch06mother = 1
+                $ ch06choice2 = 1
+                jump ch06mother
+
+    label ch06dwarf:
+            
+        scene c06s15p019 with dissolve
+        if ch06choice2 = 0:
+            mc "Hannah, come with me. Let’s go talk to the dwarf, see if he knows anything. The fact that he’s here means that he’s traveled, right? Maybe he knows something."
+            mc "Emily and Skylar, why don’t the two of you go talk to the elf woman. Kenny and Kaylee, take Oscar out into the forest. See if you can forage some food for when we leave."
+            na "They all nod, happy to have some kind of direction. You take Hannah’s hand and turn towards the dwarf."
+        elif ch06choice2 = 1:
+            mc "Come on, let’s go talk to the dwarf. Hopefully he’ll be willing to share some information without buying him drinks."
+            ha "I could go for a drink. We’re really going to need to find a way to make some money."
+        scene c06s15p032 with dissolve
+        na "The two of you approach the dwarf. He seems to be getting ready to shoe a horse, and looks up as you get near."
+        dwarf "What do the two of you want? Can’t you see I’m busy?"
+        scene c06s15p033 with dissolve
+        mc "I’m sorry, we won’t take much of your time. I promise. My name is [mc], and this is Hannah. We were hoping to ask you a couple questions real quick."
+        na "He gives you a noncommittal grunt, taking a seat on a small bench."
+        scene c06s15p034 with dissolve
+        grum "Yeah, sure. I guess. Name’s Hasgrum. What do you want to know?"
+        mc "Well, to be blunt, we’re looking for someone. Does the name Alorine ring a bell?"
+        scene c06s15p035 with dissolve
+        na "His head immediately shoots up to look at you. The look on his face is not a friendly one."
+        grum "Now why in the five hells would you want to know about that woman?"
+        mc "So you {i}do{/i} recognize the name then."
+        scene c06s15p036 with dissolve
+        grum "Of course I do. That blasted woman damn near destroyed my people. But that was so long ago, and she hasn’t been seen since... well no matter. Why would you ask a dwarf about Alorine?"
+        scene c06s15p037 with dissolve
+        ha "We meant no offense, really. We’re not from around here, and we need to find her in order to get home."
+        na "The man laughs, before seeing that you’re serious."
+        scene c06s15p038 with dissolve
+        grum "I just told you, she hasn’t been seen in forever. She’s long dead, and good riddance."
+        na "Hannah starts to speak, likely to contradict Hasgrum, but you quickly cut her off."
+        mc "Oh I’m sure she is. And rightfully so! But, if we wanted to find her body... do you happen to know where we might start looking?"
+        scene c06s15p039 with dissolve
+        na "Hasgrum peers at you for a moment, seeming to try and figure out what kind of nonsense you’re trying to pull. He sighs, and speaks again."
+        grum "If you’re determined to find her, suppose I won’t be able to stop you. Her castle is in the mountains of my people, though they’ve long since abandoned those caves."
+        grum "Head to the port city of Ghant, to the east. I’m sure someone there will be able to point you in the right direction. It’s been a long time since I did my last pilgrimage."
+        grum "Probably better routes now than what I took back then."
+        scene c06s15p040 with dissolve
+        mc "Thank you, we appreciate it. We won’t keep you any longer."
+        na "You give the man a nod before turning away with Hannah."
+
+        if ch06choice2 = 1:
+            ha "Okay, I think we’ve gotten as much as we’re going to get. Let’s go talk to Emily and Skylar, compare notes."
+            jump ch06s15postloop
+
+        ha "Well, that was something at least. Who should we talk to next?"
+        scene c06s15p041 with dissolve
+        na "Looking around, you see that Emily and Skylar walking away from the elven woman."
+
+        menu:
+            "The couple":
+                $ ch06couple = 1
+                $ ch06choice2 = 1
+                jump ch06couple
+            "The mother and child":
+                $ ch06mother = 1
+                $ ch06choice2 = 1
+                jump ch06mother
+
+    label ch06couple:
+
+        scene c06s15p042 with dissolve
+
+        if ch06choice1 = 3:
+            mc "Hannah, come with me. Let’s go talk to that couple over there, see if they know anything. Get two people for the price of one."
+            mc "Emily and Skylar, why don’t the two of you go talk to that mother and her kid over there. Kenny and Kaylee, take Oscar out into the forest. See if you can forage some food for when we leave."
+            na "They all nod, happy to have some kind of direction. You take Hannah’s hand and turn towards the couple."
+        elif ch06choice2 = 1:
+            mc "Come on, let’s go talk to the couple. Hopefully they’ll be able to help us. You know, couple to couple."
+            na "Hannah smiles at you, taking your hand into hers as you walk."
+
+        scene c06s15p043 with dissolve
+        na "You can hear the two of them laughing and giggling with each other as you approach. You decide to hold off and let Hannah take the lead."
+        ha "Hello! I’m so sorry to interrupt the two of you, but I’m really hoping to ask you a couple questions, if that’s okay? My name is Hannah, and this is [mc]."
+        scene c06s15p044 with dissolve
+        jules "Oh, hello! Of course, we don’t mind at all. It’s so nice to meet you. I’m Jules, and this is Noveo. I don’t think I’ve seen the two of you before!"
+        ha "We’re not from around here, just traveling through."
+        scene c06s15p045 with dissolve
+        noveo "That’s a shame. Most of the people here are old. Sure would be nice to have some others around our age."
+        ha "Ah, sorry about that. We’re planning to head back out today. Hoping, anyway. Kind of depends on if we can get some directions."
+        jules "Well, neither one of us has done any traveling. But we’ll do our best to help!"
+        scene c06s15p046 with dissolve
+        ha "Great! Thanks! So, just to put it out there, have either of you ever heard the name Alorine before?"
+        scene c06s15p047 with dissolve
+        na "They look at each other, confusion plainly on their faces. They seem to have an unspoken conversation, and not one that will be helpful."
+        na "After a moment of thought, they both look back at Hannah."
+        scene c06s15p048 with dissolve
+        jules "I’m sorry, but there’s no one in this village with that name. Such a strange name, I’m sure we’d know if someone here had it."
+        noveo "Yeah, and I work at the trading post every now and then. Never heard anyone mention a name like that. Sorry."
+        scene c06s15p049 with dissolve
+        ha "No, it’s okay. We knew it was going to be a long shot. Look, we need to ask around some more and we don’t have much time. It was nice to meet you!"
+        jules "You too! Good luck with whatever you’re looking for!"
+        scene c06s15p050 with dissolve
+        na "The two of them turn and walk away, resuming the flirtatious conversation you had interrupted."
+
+        if ch06choice2 = 1:
+            ha "Okay, I think we’ve gotten as much as we’re going to get. Let’s go talk to Emily and Skylar, compare notes."
+            jump ch06s15postloop
+
+        ha "Well, that was a waste of time. Hopefully the next one will go better. Who next?"
+        scene c06s15p051 with dissolve
+        na "Looking around, you see that Emily and Skylar walking away from the mother and child."
+
+        menu:
+            "The elf woman":
+                $ ch06elf = 1
+                $ ch06choice2 = 1
+                jump ch06elf
+            "The dwarf":
+                $ ch06dwarf = 1
+                $ ch06choice2 = 1
+                jump ch06dwarf
+
+    label ch06mother:
+
+        scene c06s15p042 with dissolve
+
+        if ch06choice1 = 4:
+            mc "Hannah, come with me. Let’s go talk to that mother and her kid over there, see if she knows anything. Though I’m doubtful, if I’m being honest."
+            mc "Emily and Skylar, why don’t the two of you go talk to that couple over there. Kenny and Kaylee, take Oscar out into the forest. See if you can forage some food for when we leave."
+            na "They all nod, happy to have some kind of direction. You take Hannah’s hand and turn towards the mother."
+        elif ch06choice2 = 1:
+            mc "Come on, let’s go talk to the mother. I can’t imagine she’ll know much, but we have to try."
+            na "Hannah nods grimly as you lead the way."
+
+        scene c06s15p052 with dissolve
+        na "The woman notices the two of you heading her way, and quickly moves to put herself between you and the child."
+        scene c06s15p053 with dissolve
+        mother "Can I help you?"
+        mc "I’m sorry, we didn’t mean to upset or worry you. We’re not from around here, and we’re just trying to find some information before we move on. Really, we mean you no harm."
+        na "She seems to relax, but only a little."
+        scene c06s15p054 with dissolve
+        mother "Okay. I don’t know how much I can help though. My life has been nothing but this village."
+        mc "That’s alright. There’s always a chance that maybe you heard something in passing. We’ll be quick, I promise."
+        mother "Sure. So, what kind of information are you looking for?"
+        scene c06s15p055 with dissolve
+        ha "Well, we’re looking for a woman by the name of Alorine. Have you heard that name before?"
+        na "The woman looks away, watching the child play as she thinks about your question."
+        na "It takes a moment before she turns back to you and speaks again."
+        scene c06s15p056 with dissolve
+        mother "I’m sorry. I’d like to help, but I’ve never heard that name before. And I have to say, I’d prefer not hearing it again. I got the chills when you said it."
+        na "She immediately starts to move away with the child, not looking back."
+        scene c06s15p057 with dissolve
+        na "You and Hannah watch as she disappears around a building."
+        mc "That was strange."
+        scene c06s15p058 with dissolve
+        ha "Yeah, think she was hiding something?"
+        mc "No, I don’t think so. Maybe something subconscious? Anyway, that was a bust."
+
+        if ch06choice2 = 1:
+            ha "Well, I think we’ve gotten as much as we’re going to get. Let’s go talk to Emily and Skylar, compare notes."
+            $ jump ch06s15postloop
+
+        ha "Well, that was a waste of time. Hopefully the next one will go better. Who next?"
+        scene c06s15p059 with dissolve
+        na "Looking around, you see that Emily and Skylar are walking away from the young couple."
+
+        menu:
+            "The elf woman":
+                $ ch06elf = 1
+                $ ch06choice2 = 1
+                jump ch06elf
+            "The dwarf":
+                $ ch06dwarf = 1
+                $ ch06choice2 = 1
+                jump ch06dwarf
+
+    label ch06s15postloop:
